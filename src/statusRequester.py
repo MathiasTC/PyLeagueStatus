@@ -1,7 +1,7 @@
-import requests, settings
+import requests, secret_settings
 
 def FetchLeagueStatusData():
-    response = requests.get('https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=' + settings.API_KEY)
+    response = requests.get('https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=' + secret_settings.API_KEY)
     data = response.json()
     return data
 

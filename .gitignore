@@ -1,2 +1,2 @@
 # Exclude secret settings
-settings.py
+secret_settings.py
