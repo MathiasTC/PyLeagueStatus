@@ -1,4 +1,11 @@
-import requests, secret_settings
+import requests
+import os,sys,inspect
+
+# Importing secret_settings from parent folder
+current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir) 
+import secret_settings
 
 def FetchLeagueStatusData():
     response = requests.get('https://euw1.api.riotgames.com/lol/status/v3/shard-data?api_key=' + secret_settings.API_KEY)

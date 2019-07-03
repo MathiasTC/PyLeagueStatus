@@ -1,2 +1,3 @@
 # Exclude secret settings
 secret_settings.py
+__pycache__
